@@ -1,6 +1,7 @@
 import { MongoClient } from "mongodb";
 const url =
-  "mongodb+srv://haemi:siasua@cluster0.bmbs9sd.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://haemi:siasua@cluster0.bmbs9sd.mongodb.net/notice?retryWrites=true&w=majority";
+// notice 이름을 넣으면 notice collection에 session 정보를 넣어줌!
 const options = { useNewUrlParser: true };
 let connectDB;
 
