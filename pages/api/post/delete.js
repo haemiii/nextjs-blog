@@ -7,7 +7,7 @@ export default async function Delete(req, res) {
   let session = getServerSession(authOptions);
 
   if (req.method == "DELETE") {
-    if (session.user.email === req.body.email) {
+    if (session.user.email === req.body.email || req.body.role == "admin") {
       const db = (await connectDB).db("notice");
       let result = await db
         .collection("post")
