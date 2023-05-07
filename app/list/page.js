@@ -3,6 +3,8 @@ import Link from "next/link";
 import DetailLink from "./detailLink";
 import ListItem from "./Listltem";
 
+export const dynamic = "force-dynamic"; //렌더링 전략 : 다이나믹
+
 export default async function List() {
   const client = await connectDB;
   const db = client.db("notice");
