@@ -42,11 +42,16 @@ a {
 .navbar {
   background: white;
   padding: 20px;
+  display: flex;
+  align-items: center;
 }
 .navbar a {
   margin-right: 10px;
   text-decoration: none;
   color: black;
+}
+.navbar span {
+  margin-right: 10px;
 }
 .logo {
   font-weight: bold;
