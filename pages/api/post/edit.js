@@ -5,7 +5,6 @@ import { authOptions } from "../auth/[...nextauth]";
 
 export default async function handler(req, res) {
   let session = await getServerSession(authOptions);
-  console.log(req);
   if (req.method == "POST") {
     if (req.body.email === session.user.email || req.body.role == "admin") {
       let update = { title: req.body.title, content: req.body.content };
